@@ -1,0 +1,48 @@
+.projexblog-drop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 0.5px solid dimgray;
+    background-color: black;
+}
+
+.projexblog-drop-container-top {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projexblog-drop-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projexblog-drop-title {
+    flex-shrink: 1;
+    color: #f0fff8;
+    font-size: 16px;
+}
+
+.projexblog-drop-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projexblog-drop-icon-x {
+    text-align: center;
+    width: 3rem;
+    color: #f0fff8;
+    font-size: 16px;
+}
+.projexblog-drop-icon-v {
+    text-align: center;
+    width: 3rem;
+    color: #f0fff8;
+    font-size: 16px;
+}
+
+.projexblog-drop-content {
+    text-align: start;
+    color: #f0fff8;
+    font-size: 12px;
+}

@@ -36,7 +36,7 @@ function TopNav(props:any) {
             <div className={"topnav-right"}>
                 <div className={props.title !== "home" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(0)}}>Home</div>
                 <div className={props.title !== "projex" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(1)}}>Projex</div>
-                <div className={props.title !== "about" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(2)}}>About</div>
+                {/*<div className={props.title !== "about" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(2)}}>About</div> */}
                 <div className={props.title !== "qa" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(3)}}>FAQ</div>
                 <div className={props.title !== "contact" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => {handleClick(4)}}>Contact</div>
             </div>

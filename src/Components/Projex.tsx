@@ -1,42 +1,62 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import '../CSS/Projex.css';
 import Header from "../Components/Header";
 import TopNav from "../Components/TopNav";
 import Footer from "../Components/Footer";
 import ProjexDrop from "../Components/ProjexDrop";
+import ProjexData from "../Data/ProjexData";
+import KismetAtakCompanion from "../Data/ProjexComponents/KismetAtakCompanion";
+import SkyviewRpi from "../Data/ProjexComponents/SkyviewRpi";
 
 function Projex() {
+    const revealClose = 0
 
-    const [revealOpen, setRevealOpen] = useState(0);
+    const [revealOpen, setRevealOpen] = useState(revealClose);
 
-    function handleClick(num:number) {
-        window.alert(num)
-        setRevealOpen(num);
+    function handleRevealOpen(id:number) {
+        setRevealOpen(id)
+        console.log("open reveal");
     }
+
+    function handleRevealClose() {
+        setRevealOpen(revealClose)
+        console.log("close reveal")
+    }
+
+    function returnProjexBlog() {
+        const i = revealOpen-1;
+        switch (revealOpen) {
+            case 1:
+                return <SkyviewRpi handleClose={handleRevealClose} index={i}/>
+            case 2:
+                return <KismetAtakCompanion index={i}/>
+            default:
+                return <>"error"</>
+        }
+    }
+
+    useEffect(() =>
+    {
+        returnProjexBlog()
+    },[revealOpen]);
 
     return (
         <div className={"projex-wrapper"}>
             <Header title={"projex"}/>
             <TopNav title={"projex"}/>
             <div className={"projex"}>
-                {revealOpen === 0 ? 
+                {revealOpen === 0 ?
                 <div className={"projex-grid-container"}>
-                    <ProjexDrop project={"Manifest Application"} onClick={() => handleClick(1)}/>
-                    <ProjexDrop project={"Skyview-RPi"} onClick={() => handleClick(2)}/>
-                    <ProjexDrop project={"ATAK DACO Plugin"} onClick={() => handleClick(3)}/>
-                    <ProjexDrop project={"75th Ranger Regiment Website"} onClick={() => handleClick(4)}/>
-                    <ProjexDrop project={"Node-Red TAK integrations"} onClick={() => handleClick(5)}/>
-                    <ProjexDrop project={"Kismet ATAK Companion"} onClick={() => handleClick(6)}/>
+                    {ProjexData.map((pd) => (
+                        <div key={pd.id} onClick={() => handleRevealOpen(pd.id)}>
+                            <ProjexDrop project={pd.title}/>
+                        </div>
+                        ))}
                 </div>
                 :
                 <div className={"projex-display-container"}>
-                {revealOpen === 1 && <p>hello</p>}
-                {revealOpen === 2 && <p>greetigs</p>}
-                {revealOpen === 3 && <p>hi</p>}
-                {revealOpen === 4 && <p>hola</p>}
-                {revealOpen === 5 && <p>aloha</p>}
-                {revealOpen === 6 && <p>hey</p>}
+                    {returnProjexBlog()}
                 </div>
                 }
             </div>

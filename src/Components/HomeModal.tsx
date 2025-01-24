@@ -8,17 +8,17 @@ function HomeModal(props:any) {
     function handleTrait() {
         switch (props.trait) {
             case 1:
-                return `trait Initiating Improvements: `
+                return `I actively seek opportunities to enhance existing systems, using each initiative as a chance to acquire new skills and expand my technical expertise. This is largely driven by my passion towards technology and problem solving.`
             case 2:
-                return `trait Technological Innovation:`
+                return `I thrive on exploring and developing new product ideas, combining creativity and a diverse technical background to bring visionary concepts to life.`
             case 3:
-                return `trait Team Problem Solving:`
+                return `I excel at working with teams to tackle challenges, leveraging diverse perspectives and fostering a solution-oriented environment to achieve impactful results.`
             case 4:
-                return `trait Cross-Organization Collaboration:`
+                return `I build strong partnerships across teams and departments, driving alignment and synergy to achieve shared goals and deliver impactful outcomes.`
             case 5:
-                return `trait Technology Integration:`
+                return `I seamlessly incorporate new tools and technology into existing infrastructures, optimizing workflows and enhancing operational efficiency across the organization.`
             case 6:
-                return `trait Leadership:`
+                return `I inspire and guide teams towards achieving goals, fostering a culture of collaboration, accountability, and continuous growth while driving strategic initiatives to success.`
             default:
                 return
         }
@@ -27,25 +27,17 @@ function HomeModal(props:any) {
     function handleAttr() {
         switch (props.attr) {
             case 1:
-                return `atribute HTML:`
+                return `JaxGMC, KismetAtakCompanion, JaxWebsite, 75th RR Website`
             case 2:
-                return `attribute CSS:`
+                return `JaxWebsite, 75th RR Website, HallOfHeroes/HallOfValor (WebApp Kiosk)`
             case 3:
-                return `atribute React:`
+                return `JaxGMC, KismetAtakCompanion, JaxWebsite, 75th RR Website, Skyview-RPi`
             case 4:
-                return `attribute Javascript:`
+                return `DACO (Android/ATAK Plugin), Demo (Android/ATAK Plugin), Manifest (WebApp)`
             case 5:
-                return `atribute Typescript:`
+                return `JaxGMC, KismetAtakCompanion`
             case 6:
-                return `attribute SQL:`
-            case 7:
-                return `attribute Java:`
-            case 8:
-                return `attribute Android:`
-            case 9:
-                return `attribute Python:`
-            case 10:
-                return `attribute Bash:`
+                return `Misc task automation`
             default:
                 return
         }
@@ -54,29 +46,23 @@ function HomeModal(props:any) {
     function handleHobby() {
         switch (props.hobby) {
             case 1:
-                return `hobby Cloud Servers:`
+                return `I take great pleasure in designing and managing self-hosted services within my home lab. This hands-on experience allows me to explore new technologies, automate workflows, and refine my technical skills, all while maintaining complete control over my personal infrastructure.`
             case 2:
-                return `hobby Home Lab:`
+                return `I have a deep interest in working with electronics and microcontrollers, which enables me to blend creativity with technical skills, building innovative solutions while continuously learning new concepts in hardware and software integration.`
             case 3:
-                return `hobby Electronics:`
+                return `I have a strong enthusiasm for automation, using technology to optimize and streamline everyday living. By connecting and automating various IOT systems, I create solutions that improve convenience, security, and energy efficiency, while constantly exploring new advancements in the field.`
             case 4:
-                return `hobby Automation:`
+                return `I have an interest in fabrication, where I combine creativity and technical skills to design and create functional, custom-built projects. Whether working with metal, wood, or other materials, I enjoy the process of transforming concepts into tangible, precise creations, constantly learning and improving my craftsmanship.`
             case 5:
-                return `hobby Photography:`
+                return `I am interested in surveillance systems, focusing on designing and implementing solutions that enhance security and monitoring. By integrating cameras, sensors, and other technologies, creating systems that provide real-time insights.`
             case 6:
-                return `hobby Fabrication:`
+                return `I have received specialized training in relation to red teaming, with a focus on physical penetration testing. This training has equipped me with the skills to assess and challenge physical security systems, including access controls, surveillance, and response protocols.`
             case 7:
-                return `hobby Surveillance:`
+                return `I have experience in integrating Mobile Ad-hoc Networks (MANETs) and radio mesh systems into practical applications. By leveraging these decentralized networks, I enhance communication capabilities in environments where traditional infrastructure is impractical. `
             case 8:
                 return `hobby Red Teaming:`
             case 9:
                 return `hobby MANET:`
-            case 10:
-                return `hobby TAK:`
-            case 11:
-                return `hobby SDRs:`
-            case 12:
-                return `hobby COTs:`
             default:
                 return
         }
