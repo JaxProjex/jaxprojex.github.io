@@ -15,7 +15,7 @@
 }
 .ascii-art {
     margin-bottom: 1rem;
-    font-size: min(1.6vh, 1.6vw);
+    font-size: min(1.4vh, 1.8vw);
     white-space: pre;
     color: #f0fff8; /* almost white */
     animation: animateTitle 10s infinite;

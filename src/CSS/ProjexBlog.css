@@ -4,20 +4,23 @@
     background: black;
     border-radius: 10px;
     width: 95vw;
-    height: 65vh;
+    height: 100%;
 }
 .projexblog-container:hover {
     cursor:default;
 }
 
 .projexblog-x-container {
-    display: flex;
     height: 2rem;
+    width: 2rem;
     position: relative;
-    top: 10px;
+    top: 5px;
+}
+.projexblog-x-container-1 {
+
 }
 .projexblog-x-icon {
-    left: 10px;
+    left: 5px;
     text-align: center;
     width: 3rem;
     color: #f0fff8;
@@ -39,14 +42,14 @@
     display: flex;
     flex-direction: column;
     /*border: 0.5px solid #f0fff8;*/
-    height: 58vh;
+    height: 58dvh;
     overflow: auto;
 }
 
 .projexblog-title-container {
     display: flex;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 8vh;
     padding-bottom: 1vh;
     align-items: center;
 }
@@ -61,7 +64,7 @@
     text-decoration: none;
     text-decoration-thickness: 0;
     color: #f0fff8;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 200;
     text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
 }
@@ -96,7 +99,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 1vh;
-    padding-bottom: 6vh;
+    padding-bottom: 8vh;
 }
 .projexblog-description {
     text-align: center;
@@ -134,8 +137,10 @@
 }
 
 .projexblog-tags-container {
+
 }
 .projexblog-tags {
+    padding: 20px 0;
     text-align: center;
     text-decoration: none;
     text-decoration-thickness: 0;
