@@ -6,19 +6,22 @@
     width: 95vw;
     height: 65vh;
 }
+.projexblog-container:hover {
+    cursor:default;
+}
 
 .projexblog-x-container {
+    display: flex;
     height: 2rem;
     position: relative;
-    top: 10px
+    top: 10px;
 }
 .projexblog-x-icon {
     left: 10px;
     text-align: center;
     width: 3rem;
-    padding-right: 5px;
     color: #f0fff8;
-    font-size: 16px;
+    font-size: 18px;
 }
 .projexblog-x-container:hover {
     cursor:default;
@@ -36,45 +39,106 @@
     display: flex;
     flex-direction: column;
     /*border: 0.5px solid #f0fff8;*/
-    height: 55vh;
+    height: 58vh;
     overflow: auto;
 }
 
 .projexblog-title-container {
     display: flex;
     justify-content: center;
-    height: 6rem;
-    margin-top: 2rem;
+    padding-top: 10vh;
+    padding-bottom: 1vh;
+    align-items: center;
+}
+.projexblog-title-container-1 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .projexblog-title {
     padding: 5px;
     text-align: center;
+    text-decoration: none;
+    text-decoration-thickness: 0;
     color: #f0fff8;
     font-size: 20px;
+    font-weight: 200;
     text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
+}
+.projexblog-title:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0;
+}
+.projexblog-title-nav {
+    text-align: center;
+    width: 3rem;
+    color: #f0fff8;
+    font-size: 20px;
+}
+
+.projexblog-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projexblog-link {
+    text-align: center;
+    font-size: 10px;
+    color: #f0fff8;
+    text-decoration: none;
+}
+.projexblog-link:hover {
+    text-decoration: underline;
 }
 
 .projexblog-description-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding-top: 1vh;
+    padding-bottom: 6vh;
 }
 .projexblog-description {
     text-align: center;
-    font-size: 14px;
-    /*color: #f0fff8;  almost white */
-    color: dimgray;
+    font-size: 12px;
+    color: #f0fff8;
+    font-weight: lighter;
+    /*color: dimgray;*/
+    width: 98%;
 }
 
 .projexblog-body-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    height: 4rem;
+    padding: 5px 0;
     /*border: 0.5px solid #f0fff8;*/
+}
+.projexblog-body-container-1 {
+    width: 95%;
 }
 .projexblog-body {
     font-size: 12px;
     color: #f0fff8; /* almost white */
+    width: 95%;
+}
+.projexblog-body-subtitle {
+    color: #f0fff8;
+    font-size: 16px;
+    text-decoration: none;
+}
+.projexblog-body-text {
+    color: #f0fff8;
+    font-size: 12px;
+}
+
+.projexblog-tags-container {
+}
+.projexblog-tags {
+    text-align: center;
+    text-decoration: none;
+    text-decoration-thickness: 0;
+    color: dimgray;
+    font-size: 10px;
 }

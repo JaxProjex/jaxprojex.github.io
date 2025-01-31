@@ -4,21 +4,25 @@ import "../../CSS/ProjexBlogDrop.css"
 
 function ProjexDrop({title, content}) {
 
-    const [revealDrop, setReveal] = useState(false);
+    const [revealDrop, setReveal] = useState(title === "Overview");
 
     function handleReveal() {
         if (revealDrop) {
             return (
                 <div className={"projexblog-drop-container"}>
                     <div className={"projexblog-drop-container-top"}>
-                        <div className={"projexblog-drop-title"}>{title}</div>
+                        <div className={"projexblog-drop-title"}>
+                            {title}
+                        </div>
                         <div className={"projexblog-drop-icon-x"} onClick={() => {
                             setReveal(false)
                         }}>
                             [ X ]
                         </div>
                     </div>
-                    <div className={"projexblog-drop-content"}>{content}</div>
+                    <div className={"projexblog-drop-content"}>
+                        {content}
+                    </div>
                 </div>
             )
         } else {
