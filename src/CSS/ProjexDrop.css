@@ -1,8 +1,8 @@
 
 .projex-drop-container-reveal {
-    width: max(40rem, 80vw);
+    width: min(40rem, 80vw);
     height: 100%;
-    border: 1px solid #f0fff8;
+    border: 0.5px solid #f0fff8;
     border-radius: 10px;
     background-color: black;
     display: flex;
@@ -11,9 +11,9 @@
 }
 
 .projex-drop-container {
-    width: max(6rem, 16vw);
-    height: max(6rem, 16vh);
-    border: 1px solid #f0fff8;
+    width: min(12rem, 24vw);
+    height: max(8rem, 18vh);
+    border: 0.5px solid #f0fff8;
     border-radius: 10px;
     background-color: black;
     display: flex;
@@ -22,11 +22,12 @@
 }
 
 .projex-drop-text {
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     color: #f0fff8;
-    font-size: 16px;
+    font-size: 14px;
     text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
+    font-weight: lighter;
 }
 
 .projex-drop-container-reveal:hover .projex-drop-text {

@@ -55,9 +55,12 @@ function Projex() {
                         ))}
                 </div>
                 :
-                <div className={"projex-display-container"}>
-                    {returnProjexBlog()}
-                </div>
+                    <>
+                        <div className="blur-overlay"></div>
+                        <div className={"projex-display-container"}>
+                            {returnProjexBlog()}
+                        </div>
+                    </>
                 }
             </div>
             <Footer/>

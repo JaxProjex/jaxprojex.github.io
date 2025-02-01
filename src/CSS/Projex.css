@@ -13,11 +13,26 @@
 }
 
 .projex-grid-container {
-    padding: 1rem 0;
+    padding: 2rem 0;
     display: grid;
     justify-items: flex-end;
     align-items: flex-end;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    gap: 2rem 2rem;
-
+    gap: 4vh 6vw;
 }
+
+.projex-display-container {
+    z-index: 200;
+}
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3); /* Dim background */
+    backdrop-filter: blur(3px); /* Apply blur effect */
+    z-index: 100; /* Ensure it stays above other content */
+}
+
