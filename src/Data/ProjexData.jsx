@@ -3,6 +3,7 @@ const ProjexData = [
     {
         id: 1,
         title: "Skyview RPi: ATAK Forwarder",
+        images: ["logo1.png", "logo2.png","ss1.jpg"],
         tags: "#RaspberryPi - #NodeRed - #MQTT - #Websocket - #Netmon - #Linux",
         description: "this is a description that follows the format of being something that explains this project description of being to do",
         image: ["/images/project1.jpg"],

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../CSS/ProjexBlogBody.css"
+import "../CSS/ProjexBlogBody.css"
 
 function ProjexBlogBody({content}) {
     return (

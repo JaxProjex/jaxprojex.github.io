@@ -1,5 +1,5 @@
 import React from "react";
-import ProjexData from "../ProjexData";
+import ProjexData from "../Data/ProjexData";
 
 function KismetAtakCompanion({index}) {
 

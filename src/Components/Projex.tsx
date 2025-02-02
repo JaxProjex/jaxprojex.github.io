@@ -6,8 +6,8 @@ import TopNav from "../Components/TopNav";
 import Footer from "../Components/Footer";
 import ProjexDrop from "../Components/ProjexDrop";
 import ProjexData from "../Data/ProjexData";
-import KismetAtakCompanion from "../Data/ProjexComponents/KismetAtakCompanion";
-import SkyviewRpi from "../Data/ProjexComponents/SkyviewRpi";
+import KismetAtakCompanion from "../ProjexComponents/KismetAtakCompanion";
+import SkyviewRpi from "../ProjexComponents/SkyviewRpi";
 
 function Projex() {
     const revealClose = 0

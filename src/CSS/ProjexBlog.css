@@ -108,6 +108,11 @@
     width: 98%;
 }
 
+.projexblog-images-container {
+    padding-top: 1vh;
+    padding-bottom: 8vh;
+}
+
 .projexblog-body-container {
     display: flex;
     justify-content: center;

@@ -10,17 +10,16 @@ import Projex from "./Components/Projex";
 
 function App() {
   return (
-      <>
         <Router>
-          <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/projex' element={<Projex/>} />
-            <Route path='/about' element={<About/>} />
-            <Route path='/qa' element={<Qa/>} />
-            <Route path='/contact' element={<Contact/>} />
-          </Routes>
+            <Routes>
+                {/*<Route path='/' element={<Home/>} />*/}
+                <Route path='/' element={<Projex/>} />
+                <Route path='/projex' element={<Projex/>} />
+                <Route path='/about' element={<About/>} />
+                <Route path='/qa' element={<Qa/>} />
+                <Route path='/contact' element={<Contact/>} />
+            </Routes>
         </Router>
-      </>
   );
 }
 

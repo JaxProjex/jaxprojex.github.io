@@ -1,10 +1,12 @@
 import React from "react";
-import "../../CSS/ProjexBlog.css"
-import QaDrop from "../../Components/QaDrop";
+import "../CSS/ProjexBlog.css"
+import QaDrop from "../Components/QaDrop";
 import ProjexBlogDrop from "./ProjexBlogDrop";
+import ProjexBlogImages from "./ProjexBlogImages";
 
 function ProjexBlog({handleClose,
                         title,
+                        images,
                         tags,
                         description,
                         link,
@@ -12,6 +14,12 @@ function ProjexBlog({handleClose,
                         body2,
                         body3,
                         body4}) {
+
+    const bodyTitle1 = "Overview";
+    const bodyTitle2 = "Components, Materials, Setup";
+    const bodyTitle3 = "Capabilities & Usage";
+    const bodyTitle4 = "Results";
+
 
     return (
         <div className={"projexblog-container"}>
@@ -52,14 +60,18 @@ function ProjexBlog({handleClose,
                         </div>
                     </div>
 
+                    <div className={"projexblog-images-container"}>
+                        <ProjexBlogImages images={images}/>
+                    </div>
+
                     <div className={"projexblog-container-2"}>
 
                         <div className={"projexblog-body-container"}>
                             <div className={"projexblog-body-container-1"}>
-                                <ProjexBlogDrop title={"Overview:"} content={body1}/>
-                                <ProjexBlogDrop title={"Components, Materials, Setup:"} content={body2}/>
-                                <ProjexBlogDrop title={"Capabilities & Usage:"} content={body3}/>
-                                <ProjexBlogDrop title={"Results:"} content={body4}/>
+                                <ProjexBlogDrop title={bodyTitle1} content={body1}/>
+                                <ProjexBlogDrop title={bodyTitle2} content={body2}/>
+                                <ProjexBlogDrop title={bodyTitle3} content={body3}/>
+                                <ProjexBlogDrop title={bodyTitle4} content={body4}/>
                             </div>
                         </div>
                     </div>
