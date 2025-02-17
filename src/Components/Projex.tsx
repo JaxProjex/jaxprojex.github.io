@@ -5,9 +5,12 @@ import Header from "../Components/Header";
 import TopNav from "../Components/TopNav";
 import Footer from "../Components/Footer";
 import ProjexDrop from "../Components/ProjexDrop";
-import ProjexData from "../Data/ProjexData";
-import KismetAtakCompanion from "../ProjexComponents/KismetAtakCompanion";
-import SkyviewRpi from "../ProjexComponents/SkyviewRpi";
+import {ProjexData} from "../Data/ProjexData";
+import KismetAtakCompanion from "../ProjexPages/KismetAtakCompanion";
+import SkyviewRpi from "../ProjexPages/SkyviewRpi";
+import JaxGmc from "../ProjexPages/JaxGmc";
+import NrfIot from "../ProjexPages/NrfIot";
+import AppleFindMy from "../ProjexPages/AppleFindMy";
 
 function Projex() {
     const revealClose = 0
@@ -30,7 +33,13 @@ function Projex() {
             case 1:
                 return <SkyviewRpi handleClose={handleRevealClose} index={i}/>
             case 2:
-                return <KismetAtakCompanion index={i}/>
+                return <KismetAtakCompanion handleClose={handleRevealClose} index={i}/>
+            case 3:
+                return <JaxGmc handleClose={handleRevealClose} index={i}/>
+            case 4:
+                return <NrfIot handleClose={handleRevealClose} index={i}/>
+            case 5:
+                return <AppleFindMy handleClose={handleRevealClose} index={i}/>
             default:
                 return <>"error"</>
         }

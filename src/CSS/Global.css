@@ -1,0 +1,7 @@
+:root {
+    --title-text-shadow-color: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
+    --title-color: white;
+    --subtitle-color: #f0fff8;
+    --text-color: #909090;
+    --icon-color: white;
+}

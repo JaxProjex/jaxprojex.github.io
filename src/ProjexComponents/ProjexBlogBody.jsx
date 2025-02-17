@@ -1,13 +1,14 @@
 import React from "react";
 import "../CSS/ProjexBlogBody.css"
+import "../CSS/Global.css"
 
-function ProjexBlogBody({content}) {
+function ProjexBlogBody({children}) {
     return (
         <div className={"projexblogbody-container"}>
             <div className={"projexblogbody-subcontainer"}>
                 <div className={"projexblogbody-content-container"}>
                     <div className={"projexblogbody-content"}>
-                        {content}
+                        {children}
                     </div>
                 </div>
 

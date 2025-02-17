@@ -1,0 +1,29 @@
+.projexblogentry-container {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*border: #80ffc0 2px solid;*/
+}
+
+.projexblogentry-title-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2px 0;
+}
+.projexblogentry-title {
+    font-size: 16px;
+    font-weight: normal;
+    color: #f0fff8;
+}
+
+.projexblogentry-content-container {
+
+}
+.projexblogentry-content {
+    font-size: 14px;
+    /*color: #909090;*/
+    color: var(--text-color);
+    font-weight: normal;
+}

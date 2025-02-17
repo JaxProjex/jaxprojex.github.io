@@ -21,8 +21,8 @@
 .projexblog-drop-title {
     flex-shrink: 1;
     color: #f0fff8;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
     text-decoration: underline;
     text-decoration-thickness: 0;
 }
@@ -50,5 +50,6 @@
 .projexblog-drop-content {
     padding: 0 20px;
     color: #f0fff8;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: lighter;
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import ProjexBlog from "./ProjexBlog";
-import ProjexData from "../Data/ProjexData";
+import ProjexBlog from "../ProjexComponents/ProjexBlog";
+import {ProjexData} from "../Data/ProjexData";
 import "../CSS/ProjexBlog.css"
-import ProjexBlogBody from "./ProjexBlogBody";
+import ProjexBlogBody from "../ProjexComponents/ProjexBlogBody";
 
-function SkyviewRpi({index, handleClose}) {
+function JaxGmc({index, handleClose}) {
 
     const pd = ProjexData[index]
 
@@ -39,7 +39,7 @@ function SkyviewRpi({index, handleClose}) {
                        body2={returnBody1Html()}
                        body3={returnBody1Html()}
                        body4={returnBody1Html()}
-                        />
+    />
 }
 
-export default SkyviewRpi;
+export default JaxGmc;

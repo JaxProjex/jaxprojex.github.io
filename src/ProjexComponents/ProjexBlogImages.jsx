@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "../CSS/ProjexBlogImages.css"
+import "../CSS/Global.css"
 
 function ProjexBlogImages({images}) {
 
@@ -42,16 +43,20 @@ function ProjexBlogImages({images}) {
     return (
         <>
                 <div className={"projexblogimages-container"}>
+                    {images.length > 1 && (
                     <div className={"projexblogimages-arrow"} style={{color: "white"}}
                          onClick={handleImgPrev}>&lt;</div>
+                        )}
 
                     <div className={"projexblogimages-container-1"}>
                         <img className={"projexblogimages-img"} src={imgPath + images[imgIndx]} alt={images[imgIndx]}
                              onClick={() => setImgPopup(true)}/>
                     </div>
 
+                    {images.length > 1 && (
                     <div className={"projexblogimages-arrow"} style={{color: "white"}}
                          onClick={handleImgNext}>&gt;</div>
+                    )}
                 </div>
 
                 {imgPopup && (handleImagePopup())}

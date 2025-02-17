@@ -13,8 +13,15 @@ function TopNav(props:any) {
             </div>
             <div className={"topnav-right"}>
                 {/*<div className={props.title !== "home" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => navigate("/")}>Home</div>*/}
-                <div className={props.title !== "projex" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => navigate("/projex")}>Projex</div>
-                <div className={props.title !== "about" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => navigate("/about")}>About</div>
+                <div className={props.title !== "projex" ? "topnav-right-links" : "topnav-right-links-selected"}
+                     onClick={() => navigate("/projex")}>Projex
+                </div>
+                <div className={props.title !== "xtra" ? "topnav-right-links" : "topnav-right-links-selected"}
+                     onClick={() => navigate("/xtra")}>Xtra
+                </div>
+                <div className={props.title !== "about" ? "topnav-right-links" : "topnav-right-links-selected"}
+                     onClick={() => navigate("/about")}>About
+                </div>
                 {/*<div className={props.title !== "qa" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => navigate("/qa")}>FAQ</div>*/}
                 {/*<div className={props.title !== "contact" ? "topnav-right-links" : "topnav-right-links-selected"} onClick={() => navigate("/contact")}>Contact</div>*/}
             </div>

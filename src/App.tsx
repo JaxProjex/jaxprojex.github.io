@@ -6,6 +6,7 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Qa from "./Components/Qa";
 import Projex from "./Components/Projex";
+import Xtra from "./Components/Xtra";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 {/*<Route path='/' element={<Home/>} />*/}
                 <Route path='/' element={<Projex/>} />
                 <Route path='/projex' element={<Projex/>} />
+                <Route path='/xtra' element={<Xtra/>} />
                 <Route path='/about' element={<About/>} />
                 <Route path='/qa' element={<Qa/>} />
                 <Route path='/contact' element={<Contact/>} />

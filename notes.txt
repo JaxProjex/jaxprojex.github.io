@@ -1,0 +1,4 @@
+Adding Projex:
+-use projexpagetemplate.jsx, create project jsx
+-adjust projexdata.jsx
+-adjust route to it in pojex.jsx

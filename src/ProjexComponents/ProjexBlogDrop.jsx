@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "../CSS/ProjexBlogDrop.css"
+import "../CSS/Global.css"
 
 function ProjexDrop({title, content}) {
 
-    const [revealDrop, setReveal] = useState(title === "Overview");
+    const [revealDrop, setReveal] = useState(true);
 
     function handleReveal() {
         if (revealDrop) {
@@ -14,10 +15,12 @@ function ProjexDrop({title, content}) {
                         <div className={"projexblog-drop-title"}>
                             {title}
                         </div>
-                        <div className={"projexblog-drop-icon-x"} onClick={() => {
-                            setReveal(false)
-                        }}>
-                            [ X ]
+                        <div className={"projexblog-drop-icon-container"}>
+                            <div className={"projexblog-drop-icon-x"} onClick={() => {
+                                setReveal(false)
+                            }}>
+                                [ - ]
+                            </div>
                         </div>
                     </div>
                     <div className={"projexblog-drop-content"}>
@@ -40,7 +43,7 @@ function ProjexDrop({title, content}) {
                             <div className={"projexblog-drop-icon-v"} onClick={() => {
                             setReveal(true)
                             }}>
-                                V
+                                [ + ]
                             </div>
                         </div>
                     </div>

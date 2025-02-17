@@ -1,0 +1,13 @@
+.xtra-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.xtra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#282828;
+    height: 70%;
+}
