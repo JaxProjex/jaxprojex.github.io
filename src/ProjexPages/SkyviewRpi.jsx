@@ -14,82 +14,51 @@ function SkyviewRpi({index, handleClose}) {
             <>
                 <ProjexBlogEntry title={"What is it?"}>
                     <div>
-                        A solution to forward UAS detections to all ATAK devices on the mesh network
-                        to be alerted of enemy UAS present and allow for plotting location of enemy UAS on ATAK map.
+                        <ul>
+                            <li>Raspberry Pi that forwards UAS presence notifications from a Skyview UAS detection system to all ATAK devices over a tactical mesh network, enabling real-time alerts for improved situational awareness.</li>
+                        </ul>
                     </div>
+                </ProjexBlogEntry>
+
+                <ProjexBlogEntry title={"What does it do?"}>
+                    <ul>
+                        <li>Connects a Raspberry Pi Zero W to the Skyview system and PRC-163 mesh network.</li>
+                        <li>Subscribes to the Skyview’s MQTT topics and processes UAS detection data.</li>
+                        <li>Broadcasts drone detections as CoT (Cursor on Target) messages to ATAK devices.</li>
+                        <li>Sends real-time location markers of detected UAS, home site, and controllers on ATAK.</li>
+                        <li>Notifies ATAK users via GeoChat when an enemy UAS is detected.</li>
+                    </ul>
                 </ProjexBlogEntry>
 
                 <ProjexBlogEntry title={"Why build it?"}>
                     <div>
-                        The current way of operating the Skyview UAS detection system was to utilize a USB light that plugs in the top of the skyview that changes colors to notify when enemy UAS is detected.
-                        Additionally the Skyview operator had to carry wired earphones to listen to the MGRS coordinates of the UAS system
-                        when enemy UAS was present. This provided a slow reaction time and lack of situational awareness to those that often had the tools
-                        to counter enemy UAS. With the configured raspberry pi configured and implemented with the Skyview, it provided immediate location feedback to everyone carrying a PRC-163 radio that had their ATAK device connected to the network to allow key leaders to be notified
-                        of enemy UAS so they can posture their force faster to counter the UAS threat.
+                        <ul>
+                            <li>The existing Skyview UAS detection method for field operation relied on a USB light indicator and wired earphones (audio transmission of UAS detection data), limiting awareness and response time.</li>
+                            <li>Operators had to manually relay UAS detections, causing delays in counter-UAS actions.</li>
+                            <li>This system enables instant notifications to all personnel connected to the network (PRC-163 mesh or WiFi AP), improving situational awareness and response time to better counter UAS threats.</li>
+                        </ul>
                     </div>
                 </ProjexBlogEntry>
 
                 <ProjexBlogEntry title={"How does it work?"}>
                     <div>
-                        The project itself is just a Raspberry Pi Zero W with an ethernet and USB hat
-                        attached to allow for connections to mesh radios and the Skyview system itself.
                         <ul>
-                            <li>
-                        The Raspberry Pi Zero W is powered from the Skyviews USB port, and connected to the Skyview via Ethernet (eth0).
-                        The Raspberry Pi Zero W Creates 2 WiFi Access Points for ATAK client devices to connect to:
-                        “skyview-rpi-standalone” WiFi (wlan0) is a standalone network that runs DHCP server on 192.168.42.0/24 IP scheme,
-                        the skyview webpage can be accessed from this LAN. “skyview-rpi-tether” WiFi (wlan1) is a network that is bridge (br0) to the USB-C tether (eth1) from the PRC-163, and gets its DHCP IP leasing from the connected PRC-163 Radio.
-                        If no radio and network is connected then connecting to “skyview-rpi-tether” WiFi will result in a “couldn’t obtain IP address” error.
-                            </li>
-                            <br/>
-                            <li>
-                        IPv4 forwarding is enabled and a static IP route is added on the Raspberry Pi for access to the Skyview Webpage (http://192.168.1.217).
-                            </li>
-                            <br/>
-                            <li>
-                        The Skyview is an MQTT Broker Server with multiple topics that it publishes UAS detection data to. The Raspberry Pi Zero W subscribes to several of these MQTT Topics over its WebSocket connection.
-                        Upon the Skyview Detecting UAS, the Raspberry Pi Zero W receives a JSON payload over the MQTT “detections” topic from the Skyview.
-                        The information received is then parsed (CoT XML) through the Raspberry Pi Zero W's Node-Red server and multicasted out on wlan0 ("skyview-rpi-standalone" wifi) and br0 (PRC-163 TSM network) interfaces.
-                            </li>
-                            <br/>
-                            <li>
-                        2 Message types get multicasted out as CoT XML to ATAK devices: #1 a Spot Marker of the drone, home site, and controller upon receiving valid coordinates. #2 an ATAK GeoChat message notifying the user that a Drone is detected.
-                        The Raspberry Pi Zero W will plot location markers as fast as the Skyview can detect them. Not any slower, not any faster.
-                            </li>
-                            <br/>
-                            <li>
-                        ”skyview-rpi-standalone” (wlan0) clients will receive UAS detections via multicast 239.5.5.55:7171. “skyview-rpi-tether” and other ATAK clients on the PRC-163 TSM network (br0) will receive UAS detections via multicast 239.2.3.1:6969.
-                            </li>
+                            <li>Raspberry Pi Zero W powered by USB port from the Skyview, connected via ethernet (eth0) to the Skyview systems ethernet port.</li>
+                            <li>The Raspberry Pi creates two WiFi APs for ATAK devices: “skyview-rpi-standalone” (wlan0): Standalone WLAN for direct connections. “skyview-rpi-tether” (wlan1): Bridges to PRC-163 mesh network (eth1).</li>
+                            <li>The Raspberry Pi subscribes to Skyview’s MQTT broker over WebSocket and processes UAS detection data using Node-Red.</li>
+                            <li>Detection events trigger multicast CoT messages on both WiFi networks and the PRC-163 TSM network.</li>
+                            <li>Two types of messages are sent to ATAK: Spot Markers for drones, home sites, and controllers with valid coordinates. GeoChat Messages to alert ATAK users about detected UAS activity.</li>
+                            <li>Devices on wlan0 receive data via multicast 239.5.5.55:7171, while those on br0 (TSM network) receive it via 239.2.3.1:6969.</li>
                         </ul>
                     </div>
                 </ProjexBlogEntry>
-
-                <ProjexBlogEntry title={"Capabilities"}>
-                    <div>
-                        <ul>
-                            <li>
-                                Allows UAS detections to be broadcasted over TSM to all ATAK devices connected on same network.
-                            </li>
-                            <br/>
-                            <li>
-                                Allows UAS detections to be immediately plotted on ATAK upon receiving valid coordinates of the Drone, Home Site, and/or Controller.
-                                Note, not all UAS detection types broadcast location data for skyview to intercept.
-                            </li>
-                            <br/>
-                            <li>
-                                Allows for notifications of UAS detections from Skyview to be received on ATAK as a GeoChat message in “All Chat Rooms”
-                                (Enabling ATAK notifications can help assist the user in identifying immediately when UAS is detected).
-                            </li>
-                            <br/>
-                            <li>
-                                Allows for multiple client devices (phones/computers/tablets) to be connected to the skyview simultaneously.
-                            </li>
-                            <br/>
-                            <li>
-                                Skyview webpage can still be accessed using the same default skyview IP Address (http://192.168.1.217)
-                            </li>
-                        </ul>
-                    </div>
+                <ProjexBlogEntry title={"How to improve it?"}>
+                    <ul>
+                        <li>Convert system to instead utilize cheap travel routers (custom firmware flashed GLiNet router?) and Python Flask instead of RPi boards and Node-Red.</li>
+                        <li>Optimize networking solution to not require to separate WiFi APs.</li>
+                        <li>Offer easier USB tethering setup as WiFi connection can become unreliable if jamming certain UAS frequencies.</li>
+                        <li>Provide support for dual band WiFi to allow clients to switch bands in the event one is being jammed.</li>
+                    </ul>
                 </ProjexBlogEntry>
             </>
         )

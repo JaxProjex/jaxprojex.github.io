@@ -2,7 +2,7 @@
 .projex-drop-container-reveal {
     width: min(40rem, 80vw);
     height: 100%;
-    border: 0.5px solid #f0fff8;
+    border: 1px solid #f0fff8;
     border-radius: 10px;
     background-color: black;
     display: flex;
@@ -11,21 +11,22 @@
 }
 
 .projex-drop-container {
-    width: min(12rem, 24vw);
-    height: max(8rem, 18vh);
-    border: 0.5px solid #f0fff8;
+    width: min(32rem, 40vw);
+    height: min(24rem, 36vh);
+    border: 1px solid dimgray;
     border-radius: 10px;
-    background-color: black;
+    /*background-color: black;*/
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    background: black;
 }
 
 .projex-drop-text {
-    padding: 8px;
     text-align: center;
-    color: #f0fff8;
     font-size: 14px;
+    color: #f0fff8;
     text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
     font-weight: lighter;
 }
@@ -33,10 +34,29 @@
 .projex-drop-container-reveal:hover .projex-drop-text {
     cursor:default;
     color: gray;
-    text-shadow: 0 0 5px #80ffc0, 0 0 10px #00ff66, 0 0 20px #00ff66, 0 0 40px #00ff66;
+    text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
 }
 .projex-drop-container:hover .projex-drop-text {
     cursor:default;
     color: gray;
-    text-shadow: 0 0 5px #80ffc0, 0 0 10px #00ff66, 0 0 20px #00ff66, 0 0 40px #00ff66;
+    text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
+}
+
+.projex-drop-container:hover {
+    border: 1px solid #f0fff8;
+}
+
+.projex-drop-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projex-drop-img {
+    /*width: max(10dvw, 100%);
+    height: max(10dvh, 100%);*/
+    max-width: 36vw;
+    max-height: 24vh;
+    object-fit: contain;
+    border-radius: 10px;
 }

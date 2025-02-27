@@ -1,6 +1,6 @@
 .projex-wrapper {
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .projex {
@@ -9,16 +9,17 @@
     justify-content: space-evenly;
     align-items: center;
     background-color:#282828;
-    height: 70%;
+    padding: 50px 0;
+
 }
 
 .projex-grid-container {
-    padding: 2rem 0;
+    padding: 1rem 1rem;
     display: grid;
-    justify-items: flex-end;
-    align-items: flex-end;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    gap: 4vh 6vw;
+    justify-items: center;
+    align-items: center;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 4vh 4vw;
 }
 
 .projex-display-container {
@@ -30,7 +31,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: rgba(0, 0, 0, 0.3); /* Dim background */
     backdrop-filter: blur(3px); /* Apply blur effect */
     z-index: 100; /* Ensure it stays above other content */

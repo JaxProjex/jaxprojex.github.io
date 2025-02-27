@@ -12,51 +12,45 @@ function AppleFindMy({index, handleClose}) {
         return (
             <>
                 <ProjexBlogEntry title={"What is it?"}>
-                    A solution to have devices (phones, computers, tablets) and items (airtags) in Apple FindMy network forwarded to a Traccar Server for
-                    consolidated blueforce tracking.
+                    <div>
+                        <ul>
+                            <li>Solution to forward Apple FindMy network devices (iPhones, Macbooks, iPads, Airtags) to a Traccar Server for consolidated tracking.</li>
+                        </ul>
+                    </div>
+                </ProjexBlogEntry>
+                <ProjexBlogEntry title={"What does it do?"}>
+                    <ul>
+                        <li>Collects Apple FindMy devices location data.</li>
+                        <li>Converts it into a format compatible with Traccar to ingest.</li>
+                        <li>Sends updates to a self-hosted Traccar server.</li>
+                    </ul>
                 </ProjexBlogEntry>
                 <ProjexBlogEntry title={"Why build it?"}>
                     <div>
-                    I've been a victim of having items stolen from me (to include my car) so I often utilize Bluetooth Tile
-                    and Apple Airtag devices inside of bags, cars and other personal belongings.
-                    However, between Life360, The Tile App, and the Apple FindMy app all having their own map to view their devices I wanted the ability to consolidate
-                    all devices into one visual map, hence a self hosted traccar server was created.
-                    </div>
-                    <br/>
-                    <div>
-                    I had a Traccar server for quite some time, but one day came across
-                    a github project that converted all Apple FindMy device and item data into a spreadsheet just by accessing the file that stores data of your Apple FindMy network
-                    on your MacBook. However, it required one with Ventura or earlier (Ventura stored data on "items" (airtags) while Catalina only supported "devices" (phones, tablets, computers).
-                    Fortunately i had an old MacBook Air (my first personal laptop) that was in desperate need of repurposing.
-                    I factory reset my computer to free up some space (frustratingly low internal storage space) and upgraded from Catalina to Ventura.
-                    A few lines of python and some time registering the devices in my traccar server and I finally had a use for my old MacBook Air! An Apple FindMy Traccar Forwarder server!
+                    <ul>
+                        <li>Personal experience being a victim of theft motivated the need for better tracking of Airtags.</li>
+                        <li>Wanted a unified map for Life360, Tile, and Apple FindMy devices.</li>
+                        <li>Leveraged a method to extract Apple FindMy data from macOS Ventura.</li>
+                        <li>Repurposed an outdated MacBook Air to run the forwarding script.</li>
+                    </ul>
                     </div>
                 </ProjexBlogEntry>
                 <ProjexBlogEntry title={"How does it work?"}>
                     <ul>
-                        <li>
-                            Requires a MacBook with Ventura or older. Ventura is the last Mac OS version that stopped encrypting the files that store Apple FindMy device and item data and it supports "items" (airtags) opposed to older versions.
-                            These Files can be found in ~/Library/Caches/com.apple.findmy.fmipcore/Devices.data for data on apple phones, tablets, computers, etc..
-                            And.. ~/Library/Caches/com.apple.findmy.fmipcore/Items.data for apple airtags. It's required to grant file access permissions to Terminal! The Files just contain large JSON data sets that change every so often,
-                            keeping the Apple FindMy Application running makes the data in these files update!
-                        </li>
-                        <br/>
-                        <li>
-                            Inside of the python script it disables the MacBook from going to sleep so the laptop can stay closed (sudo pmset disablesleep1).
-                            When the script is stopped (Ctr^C) it turns sleep back on (sudo pmset disablesleep 0)
-                        </li>
-                        <br/>
-                        <li>
-                            At the top of the python script it requires you to put in your user for the computer and the Traccar server IP Address. Do not include the port as it sends it over 5055 by default.
-                            The Python script populate with the names of the devices it sees and you can register these device names in your traccar server as client tracking devices.
-                        </li>
-                        <br/>
-                        <li>
-                            All devices and items have 2 locations and timestamps. One thats from your device seeing other devices on your FindMy network. And one thats "CrowdSourced" that is discovered by other people with apple devices.
-                            the last timestamps are kept and referenced to see if theres an updated change in location which will then trigger to update your traccar server.
-                        </li>
+                        <li>Requires a MacBook running macOS Ventura or older.</li>
+                        <li>Reads location data from FindMy cache files (Devices.data & Items.data).</li>
+                        <li>Grants Terminal access to read FindMy cache files.</li>
+                        <li>Prevents the MacBook from sleeping while python script is running.</li>
+                        <li>Extracts and updates device locations in Traccar via HTTP requests.</li>
+                        <li>Differentiates between "user seen" and "crowdsourced" location updates.</li>
                     </ul>
 
+                </ProjexBlogEntry>
+                <ProjexBlogEntry title={"How to improve it?"}>
+                    <ul>
+                        <li>code cleanup.</li>
+                        <li>Open FindMy app by default when script run.</li>
+                    </ul>
                 </ProjexBlogEntry>
             </>
         )

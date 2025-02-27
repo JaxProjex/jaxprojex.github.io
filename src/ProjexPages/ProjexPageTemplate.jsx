@@ -11,37 +11,45 @@ function ProjexPageTemplate({index, handleClose}) {
     function returnBody1Html() {
         return (
             <>
-                <ProjexBlogEntry title={"capabilities"}>
-                    something cool always djfeg dg gsgdtg grg g tg tg
-                    gtge gttgt gtg tgdtgtgr ewrfr ferg getget gteg
-                    tg etgetg etgetgtgt getgetg tgetg etg tgtgtg tgseget getg
+                <ProjexBlogEntry title={"What is it?"}>
+                    <div>
+
+                    </div>
+                </ProjexBlogEntry>
+                <ProjexBlogEntry title={"Why build it?"}>
+                    <div>
+
+                    </div>
+                </ProjexBlogEntry>
+                <ProjexBlogEntry title={"How does it work?"}>
+                    <div>
+
+                    </div>
+                </ProjexBlogEntry>
+                <ProjexBlogEntry title={"Capabilities"}>
+                    <div>
+
+                    </div>
                 </ProjexBlogEntry>
             </>
         )
     }
 
-    function returnBody3Html() {
+    function returnBody2Html() {
         return (
             <>
-                <ProjexBlogEntry title={"what am i going to do?"} date={"12feb2020"}>
+                <ProjexBlogEntry title={"Software"}>
                     <div>
-                        something cool is going down dlfsdfsdf fdfsd
-                        dfjdfsdjfksdf
-                        dfksdjfsdf
+
                     </div>
                     <div>
                         another tin to note
                     </div>
                 </ProjexBlogEntry>
 
-                <ProjexBlogEntry title={"what am i going to do?"} date={"12feb2020"}>
+                <ProjexBlogEntry title={"Hardware"} date={"12feb2020"}>
                     <div>
-                        something cool is going down dlfsdfsdf fdfsd
-                        dfjdfsdjfksdf
-                        dfksdjfsdf
-                    </div>
-                    <div>
-                        another tin to note
+
                     </div>
                 </ProjexBlogEntry>
             </>
@@ -59,8 +67,8 @@ function ProjexPageTemplate({index, handleClose}) {
                        link={pd.link}
                        tags={pd.tags}
                        body1={returnBody1Html()}
-                       body2={returnBody1Html()}
-                       body3={returnBody1Html()}
+                       body2={returnBody2Html()}
+                       body3={returnBody2Html()}
     />
 }
 

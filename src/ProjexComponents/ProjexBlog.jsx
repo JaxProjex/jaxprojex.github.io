@@ -27,7 +27,7 @@ function ProjexBlog({handleClose,
             <div className={"projexblog-x-container"}>
                     <div className={"projexblog-x-container-1"}>
                         <div className={"projexblog-x-icon"} onClick={handleClose}>
-                            X
+                           [ X ]
                         </div>
                     </div>
                 </div>
@@ -54,11 +54,13 @@ function ProjexBlog({handleClose,
                     <a className={"projexblog-link"} href={link}>[ {link} ]</a>
                 </div>
                 */}
+
                     <div className={"projexblog-description-container"}>
                         <div className={"projexblog-description"}>
                             {description}
                         </div>
                     </div>
+
 
                     {images.length > 0 && (
                     <div className={"projexblog-images-container"}>

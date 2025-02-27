@@ -11,6 +11,7 @@ import SkyviewRpi from "../ProjexPages/SkyviewRpi";
 import JaxGmc from "../ProjexPages/JaxGmc";
 import NrfIot from "../ProjexPages/NrfIot";
 import AppleFindMy from "../ProjexPages/AppleFindMy";
+import DeceptiveRadio from "../ProjexPages/DeceptiveRadio";
 
 function Projex() {
     const revealClose = 0
@@ -40,6 +41,8 @@ function Projex() {
                 return <NrfIot handleClose={handleRevealClose} index={i}/>
             case 5:
                 return <AppleFindMy handleClose={handleRevealClose} index={i}/>
+            case 6:
+                return <DeceptiveRadio handleClose={handleRevealClose} index={i}/>
             default:
                 return <>"error"</>
         }
@@ -53,13 +56,18 @@ function Projex() {
     return (
         <div className={"projex-wrapper"}>
             <Header title={"projex"}/>
+            <div className={"projex-wrapper-1"}>
             <TopNav title={"projex"}/>
             <div className={"projex"}>
                 {revealOpen === 0 ?
                 <div className={"projex-grid-container"}>
                     {ProjexData.map((pd) => (
                         <div key={pd.id} onClick={() => handleRevealOpen(pd.id)}>
-                            <ProjexDrop project={pd.title}/>
+                            {pd.images.length > 0 ?
+                                <ProjexDrop project={pd.title} projectImg={pd.images[0]}/>
+                                :
+                                <ProjexDrop project={pd.title}/>
+                            }
                         </div>
                         ))}
                 </div>
@@ -71,6 +79,7 @@ function Projex() {
                         </div>
                     </>
                 }
+            </div>
             </div>
             <Footer/>
         </div>

@@ -1,13 +1,14 @@
 .projexblog-container {
     /*background: dimgray;*/
     position: fixed;
-    top: 5vh;
+    top: 4dvh;
     left: 2.5vw;
     display: block;
     background: black;
     border-radius: 10px;
-    width: 95vw;
-    height: 92vh;
+    width: 95dvw;
+    height: 92dvh;
+    border: 1px solid dimgray;
 }
 .projexblog-container:hover {
     cursor:default;
@@ -29,17 +30,6 @@
     color: var(--icon-color);
     font-size: 18px;
 }
-.projexblog-x-container:hover {
-    cursor:default;
-}
-.projexblog-x-icon:hover::before {
-    content: "[ ";
-    left: 0;
-}
-.projexblog-x-icon:hover::after {
-    content: " ]";
-    right: 0;
-}
 
 .projexblog-container-1 {
     display: flex;
@@ -51,8 +41,8 @@
 .projexblog-title-container {
     display: flex;
     justify-content: center;
-    padding-top: 8vh;
-    padding-bottom: 1vh;
+    padding-top: 8dvh;
+    padding-bottom: 1dvh;
     align-items: center;
 }
 .projexblog-title-container-1 {
@@ -100,8 +90,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1vh;
-    padding-bottom: 8vh;
+    padding-top: 1dvh;
+    padding-bottom: 4dvh;
 }
 .projexblog-description {
     text-align: center;
@@ -111,8 +101,8 @@
 }
 
 .projexblog-images-container {
-    padding-top: 1vh;
-    padding-bottom: 8vh;
+    padding-top: 1dvh;
+    padding-bottom: 4dvh;
 }
 
 .projexblog-body-container {
@@ -144,7 +134,7 @@
 
 }
 .projexblog-tags {
-    padding: 20px 0;
+    padding: 20px 10px;
     text-align: center;
     text-decoration: none;
     text-decoration-thickness: 0;
