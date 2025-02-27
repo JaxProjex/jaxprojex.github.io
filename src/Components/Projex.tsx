@@ -64,7 +64,7 @@ function Projex() {
                     {ProjexData.map((pd) => (
                         <div key={pd.id} onClick={() => handleRevealOpen(pd.id)}>
                             {pd.images.length > 0 ?
-                                <ProjexDrop project={pd.title} projectImg={pd.images[0]}/>
+                                <ProjexDrop project={pd.title} description={pd.description} projectImg={pd.images[0]}/>
                                 :
                                 <ProjexDrop project={pd.title}/>
                             }

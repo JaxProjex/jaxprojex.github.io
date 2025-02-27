@@ -15,12 +15,12 @@
     height: min(24rem, 36vh);
     border: 1px solid dimgray;
     border-radius: 10px;
-    /*background-color: black;*/
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background: black;
+    padding: 5px;
 }
 
 .projex-drop-text {
@@ -29,6 +29,15 @@
     color: #f0fff8;
     text-shadow: 0 0 1px #80ffc0, 0 0 5px #00ff66, 0 0 15px #00ff66, 0 0 20px #00ff66;
     font-weight: lighter;
+}
+
+.projex-drop-desc-container {
+padding: 5px 0;
+}
+.projex-drop-desc {
+    font-size: 12px;
+    color: var(--text-color);
+    text-align: center;
 }
 
 .projex-drop-container-reveal:hover .projex-drop-text {
