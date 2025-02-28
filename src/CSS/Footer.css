@@ -1,14 +1,11 @@
 .footer {
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #282828;
-    height: 5%;
+    height: 10dvh;
     border-top: 1px solid #f0fff8;
     color: lightgray;
-
 }
 
 .footer-content-container {
@@ -20,7 +17,6 @@
 .footer-content-container:hover {
     cursor:default;
 }
-
 
 .footer-row {
     width: 100vw;

@@ -20,7 +20,7 @@
     max-height: 35vh;
     max-width: 70vw;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .projexblogimages-popup-void {
@@ -50,7 +50,7 @@
     width: max(90vw, 100%);
     height: max(90vh, 100%);
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .projexblogimages-popup-x-container {
     display: flex;

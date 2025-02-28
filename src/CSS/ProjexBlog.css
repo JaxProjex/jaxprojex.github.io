@@ -5,7 +5,7 @@
     left: 2.5vw;
     display: block;
     background: black;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 95dvw;
     height: 92dvh;
     border: 1px solid dimgray;
@@ -131,7 +131,9 @@
 }
 
 .projexblog-tags-container {
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .projexblog-tags {
     padding: 20px 10px;

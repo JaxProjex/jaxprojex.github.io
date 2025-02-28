@@ -14,7 +14,7 @@
     width: min(32rem, 40vw);
     height: min(24rem, 36vh);
     border: 1px solid dimgray;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@
 }
 
 .projex-drop-desc-container {
-padding: 5px 0;
+padding: 5px 5px;
 }
 .projex-drop-desc {
     font-size: 12px;

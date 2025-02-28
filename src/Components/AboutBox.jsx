@@ -18,10 +18,10 @@ function AboutBox() {
                 <div className={"aboutbox-body-container"}>
                     <div className={"aboutbox-body"}>
                         <div>
-                            I joined the US Army out of highschool at the age of 18 as an Army Ranger Infantryman, where I followed a fairly traditional ranger career path,
-                            serving as a 240 Machine Gunner, Grenadier, SAW Gunner, FireTeam Leader and later on as a Sniper Team Leader. I was fortunate enough
-                            to attend a technical surveillance course that would cause a career shift, where I would transition to the Reconnaissance, Surveillance, and Target Acquisition section of my unit.
-                            This experience ultimately pushed me to pursue a career in technology. After a few years, I had another great opportunity to transition into a small R&D software section at my unit where I was able to work on a variety of applications for the DoD.
+                            <p>
+                                I enjoy electronics, coding, video games, and sci-fi movies.
+                                I have a passion for building a variety of projects as a way to expand my technical expertise.
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
     width: 90dvw;
     height: 65dvh;
     background: black;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .aboutbox-container {
@@ -23,6 +23,7 @@
 .aboutbox-title {
     text-align: center;
     font-size: 20px;
+    font-weight: lighter;
     color: var(--title-color);
     text-shadow: var(--title-text-shadow-color);
 }
